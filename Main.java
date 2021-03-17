@@ -7,8 +7,11 @@ public class Main {
 
         Scanner s = new Scanner(System.in);
         int userNum;
+        //Above is creating scanner and variables.
 
         System.out.println("How many players are in this Easter egg hunt? Enter a positive whole number:");
+        //User interface.
+
         userNum = s.nextInt();
 
         ArrayList<Player> players = new ArrayList<Player>();
@@ -16,12 +19,16 @@ public class Main {
         for (int i = 0; i < userNum; i++) {
             players.add(new Player());
         }
+        //Above is adding players to the array list.
 
         System.out.println("We have added " + userNum + " players to this hunt. Let’s find some eggs!");
+        //User interface.
 
         hunt(players);
         recap(players);
+        //HELP: not sure why the recap is not working.
 
+        s.close();
     }
 
     static void hunt(ArrayList<Player> huntPlayers) {
@@ -35,6 +42,7 @@ public class Main {
             }
         }
     }
+    //Above is the gameplay. Players randomly find eggs.
 
     static void recap(ArrayList<Player> huntPlayers){
         for (int i = 0; i < huntPlayers.size(); i++){
@@ -43,5 +51,10 @@ public class Main {
             huntPlayers.get(i).printBasket();
             System.out.println();
         }
+    }
+    //Above will outlined which players found what.
+
+    static void stats(){
+        //Anyone wanna give this a go?
     }
 }
