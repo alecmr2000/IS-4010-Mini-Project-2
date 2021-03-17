@@ -36,10 +36,10 @@ class Egg{
 
         return randomContents;
     }
-    //Above randomly ricks contents for the egg. 
+    //Above randomly picks contents for the egg. 
 
     public void printEgg(){
-        System.out.println(eggColor + "egg contains " + eggContents);
+        System.out.println(eggColor + " egg contains " + eggContents);
     }
     //Above prints the egg's color and contents.
 }
